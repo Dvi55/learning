@@ -1,3 +1,5 @@
+package ua.kislun.hw2;
+
 import java.util.Scanner;
 
 public class Triangle {
