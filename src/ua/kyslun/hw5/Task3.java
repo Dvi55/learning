@@ -6,11 +6,11 @@ public class Task3 {
     public static void main(String[] args) {
         int[][] arr = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         int[][] result = swapRowsAndColumns(arr);
-        for (int[] raw : arr) {
-            System.out.println("Исходный массив:" + Arrays.toString(raw));
+        for (int[] row : arr) {
+            System.out.println("Исходный массив:" + Arrays.toString(row));
         }
-        for (int[] raw : result) {
-            System.out.println("Результирующий массив:" + Arrays.toString(raw));
+        for (int[] row : result) {
+            System.out.println("Результирующий массив:" + Arrays.toString(row));
         }
     }
 

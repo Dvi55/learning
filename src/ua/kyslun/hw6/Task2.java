@@ -1,7 +1,8 @@
 package ua.kyslun.hw6;
 
 public class Task2 {
-    // ошибка на строке 22,
+    // ошибка на строке 22, во вложенном цикле вместо j в цикле стоит i в условии остановки. нашел сравнив такие же циклы
+    // выше и устновив брейк поинт чтобы понять где вылетает ошибка
     public static void main(String[] args) {
         int[][] triangle = new int[5][];
         triangle[0] = new int[1];
@@ -19,7 +20,7 @@ public class Task2 {
         }
 
         for (int i = 0; i < triangle.length; i++) {
-            for (int j = 0; i < triangle[i].length; j++) {
+            for (int j = 0; j < triangle[i].length; j++) {
                 System.out.print(triangle[i][j] + " ");
             }
             System.out.println();
