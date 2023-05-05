@@ -19,4 +19,14 @@ public class TestIsNonIncreasing {
         int[] arr = {4, 6, 8, 1, 3, 4};
         assertFalse(isNonIncreasing(arr));
     }
+    @Test
+    public void testZeroArray() {
+        int[] arr = {};
+        assertTrue(isNonIncreasing(arr));
+    }
+    @Test
+    public void testSimilarArray() {
+        int[] arr = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+        assertTrue(isNonIncreasing(arr));
+    }
 }
