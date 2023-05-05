@@ -14,8 +14,11 @@ public class Task1 {
     }
 
     public static int[][] fillArray(int[][] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[0].length; j++) {
+        int rows = arr.length;
+        int cols = arr[0].length;
+        int[][] workArray = Arrays.copyOf(arr, arr.length);
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
                 workArray[i][j] = j + 1;
                 if (i % 2 == 1) {
                     workArray[i][j] = -workArray[i][j];
