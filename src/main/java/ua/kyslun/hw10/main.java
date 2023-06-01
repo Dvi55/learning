@@ -11,8 +11,9 @@ public class main {
                 new Aspirant("Nicki", "Minaj", 7.55),
                 new Student("Trevor", "Santina", 2.5)
         };
-        for (int i = 0; i < students.length; i++) {
-            System.out.println(students[i].getScholarship());
+        for (Student student : students) {
+            System.out.println(student.getScholarship());
         }
+
     }
 }

@@ -1,6 +1,8 @@
 package ua.kyslun.hw10;
 
 public class Aspirant extends Student {
+    private String scientificWork;
+
     public Aspirant(String firstName, String lastName, String group, double averageMark) {
         super(firstName, lastName, group, averageMark);
     }
