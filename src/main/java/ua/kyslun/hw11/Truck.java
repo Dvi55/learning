@@ -1,5 +1,10 @@
 package ua.kyslun.hw11;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class Truck extends Car {
     private int cargo;
 
@@ -28,7 +33,7 @@ public class Truck extends Car {
     @Override
     public void drive() {
         while (getFuelAmount() > 0) {
-            setFuelAmount(getFuelConsumption() * 2);
+            setFuelAmount(getFuelAmount() - (getFuelConsumption() * 2));
             System.out.println("Drive. Fuel level: " + getFuelAmount());
         }
         System.out.println("Out of fuel.");

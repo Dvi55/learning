@@ -1,5 +1,10 @@
 package ua.kyslun.hw11;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class PassengerCar extends Car implements Recovery {
     private int passengerCount;
 
