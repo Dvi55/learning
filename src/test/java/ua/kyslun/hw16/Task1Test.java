@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Map;
-import java.util.Optional;
 
 class Task1Test {
     @Test
@@ -18,8 +17,17 @@ class Task1Test {
         Map<String, Integer> map = Task1.getMapWithCountCharacters(list);
 
         Assertions.assertEquals(3, map.size());
-        Assertions.assertEquals(3, Optional.ofNullable(map.get("тут")));
-        Assertions.assertEquals(3, Optional.ofNullable(map.get("там")));
-        Assertions.assertEquals(4, Optional.ofNullable(map.get("стол")));
+        Assertions.assertEquals(3, (map.get("тут")));
+        Assertions.assertEquals(3, (map.get("там")));
+        Assertions.assertEquals(4, (map.get("стол")));
+    }
+
+    @Test
+    public void testGetMapWithCountCharactersEmpty() {
+        ArrayList<String> list = new ArrayList<>();
+
+        Map<String, Integer> map = Task1.getMapWithCountCharacters(list);
+
+        Assertions.assertEquals(0, map.size());
     }
 }
