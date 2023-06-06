@@ -11,18 +11,16 @@ public class Task3 {
             dateList.add(getRandomDate());
         }
         System.out.println(dateList.toString());
-        boolean anyMatch = dateList.stream().anyMatch(it -> it == "2023");
+        boolean anyMatch = dateList.stream().anyMatch(it -> it.equals("2023"));
         System.out.println("Date with 2023 year is present - " + anyMatch);
     }
 
     private static String getRandomDate() {
-        Random randomYear = new Random();
-        Random randomMonth = new Random();
-        Random randomDay = new Random();
+        Random random = new Random();
         StringBuilder sb = new StringBuilder();
-            int year = randomYear.nextInt(2000, 2023);
-            int month = randomMonth.nextInt(12) + 1;
-            int day = randomDay.nextInt(28) + 1;
+        int year = random.nextInt(2000, 2023);
+        int month = random.nextInt(12) + 1;
+        int day = random.nextInt(28) + 1;
         return sb.append(year).append('/').append(month).append('/').append(day).toString();
     }
 }
