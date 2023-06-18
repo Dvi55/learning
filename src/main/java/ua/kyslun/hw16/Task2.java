@@ -11,10 +11,10 @@ public class Task2 {
     //соответствующей длины.
     public static Map<Integer, List<String>> createMap(List<String> strings) {
         Map<Integer, List<String>> map = new HashMap<>();
-        for (String lines : strings) {
-            int length = lines.length();
+        for (String line : strings) {
+            int length = line.length();
             List<String> listInMap = map.getOrDefault(length, new ArrayList<>());
-            listInMap.add(lines);
+            listInMap.add(line);
             map.put(length, listInMap);
         }
         return map;
