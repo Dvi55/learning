@@ -11,16 +11,26 @@ public class MySet<T> {
         size = 0;
     }
 
-    public void add(T element) {
-        if (!contains(element) && suitableSize()) {
+    public int getSize() {
+        return size;
+    }
+
+    public boolean add(T element) {
+        if (!suitableSize()) {
+            array = Arrays.copyOf(array, array.length * 2);
             array[size] = element;
             size++;
+            return true;
+        } else if (!contains(element) && suitableSize()) {
+            array[size] = element;
+            size++;
+            return true;
         } else if (contains(element)) {
             System.out.println("This element is already in the set");
-        } else if (!suitableSize()) {
-            Arrays.copyOf(array, array.length * 2);
-            array[size] = element;
-            size++;
+            return false;
+        } else {
+            System.out.println("Something went wrong");
+            return false;
         }
     }
 
