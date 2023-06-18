@@ -8,8 +8,8 @@ public class Main {
     public static void main(String[] args) throws Exception {
         try {
             throw new Exception("Exception");
-        } catch (Exception1 | Exception2 | Exception3 exception) {
-            System.out.println(exception.getMessage());
+        } catch (Exception1 e) {
+            System.out.println(e.getMessage());
             System.out.println("Exception was processed. Program will continue");
         } finally {
             System.out.println("Finally block");
