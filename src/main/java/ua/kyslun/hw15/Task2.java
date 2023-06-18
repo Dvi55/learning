@@ -40,7 +40,6 @@ public class Task2 {
 
     public static List<String> doubling(List<String> strings) {
         List<String> newStrings = new ArrayList<>();
-        StringBuilder stringBuilder = new StringBuilder();
         for (String string : strings) {
             newStrings.add(string + string);
         }
