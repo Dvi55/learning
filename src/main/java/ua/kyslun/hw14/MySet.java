@@ -26,8 +26,7 @@ public class MySet<T> {
             size++;
             return true;
         } else if (contains(element)) {
-            System.out.println("This element is already in the set");
-            return false;
+            return true;
         } else {
             System.out.println("Something went wrong");
             return false;
