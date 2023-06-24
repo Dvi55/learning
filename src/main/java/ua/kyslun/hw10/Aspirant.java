@@ -1,10 +1,13 @@
 package ua.kyslun.hw10;
 
+import java.util.Objects;
+
 public class Aspirant extends Student {
     private String scientificWork;
 
-    public Aspirant(String firstName, String lastName, String group, double averageMark) {
+    public Aspirant(String firstName, String lastName, String group, double averageMark, String scientificWork) {
         super(firstName, lastName, group, averageMark);
+        this.scientificWork = scientificWork;
     }
 
     public Aspirant(String firstName, String lastName, double averageMark) {
@@ -20,4 +23,17 @@ public class Aspirant extends Student {
         }
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Aspirant aspirant = (Aspirant) o;
+        return Objects.equals(scientificWork, aspirant.scientificWork);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), scientificWork);
+    }
 }
