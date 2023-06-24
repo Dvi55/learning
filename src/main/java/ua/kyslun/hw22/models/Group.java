@@ -12,7 +12,7 @@ public class Group {
     //название
     //дата создания (LocalDate)
     //Студенты
-    private int id;
+    private String id;
     private String groupName;
     private LocalDate dateCreate;
     private Set<Student> students;
