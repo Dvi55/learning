@@ -1,0 +1,1 @@
+CREATE VIEW Ukrainians AS SELECT * FROM costumers WHERE country = 'Ukraine';
